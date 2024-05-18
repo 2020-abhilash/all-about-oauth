@@ -1,5 +1,5 @@
-# all-about-oauth
-Everything there is to know about OAuth 2.0 and related concepts
+# All about OAuth 2.0
+Everything there is to know about OAuth 2.0 and related concepts. I have handwritten these in my own powerpoint presentations but then had to clean it up using ChatGPT to make sure that everything in grammatically and logically correct.
 
 ## OAuth 2.0 Tokens
 
