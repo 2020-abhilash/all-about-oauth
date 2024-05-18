@@ -67,3 +67,24 @@ Everything there is to know about OAuth 2.0 and related concepts. I have handwri
 4. **Verify important claims** like `iss`, `sub`, `aud`, `iat`, and `exp`.
 
 By following these steps and considerations, you can ensure the JWT is authentic and its payload data is reliable.
+
+## Handling Tokens Safely
+
+### Guidelines
+
+1. **Tokens as Credentials**: Treat tokens as credentials and ensure they are protected accordingly within the application.
+
+2. **Token Storage**: Avoid storing tokens in client-side code. Instead, opt for secure storage options such as secure cookies, HTTP Only cookies, secure server-side sessions, or secure databases.
+
+3. **Token Transmission**: Always transmit tokens via HTTPS to ensure they are encrypted during transmission. Additionally, validate the tokens on the server-side to ensure they have not been tampered with.
+
+4. **Sensitive Information**: Refrain from storing any sensitive information in the ID token.
+
+5. **Token Lifetime**: The lifetime of the token should be determined based on the use case. Aim to keep it as short as possible without negatively impacting the end user experience, while still maintaining security.
+
+6. **Token Expiration**: Tokens can expire in two ways. They can naturally expire after a set amount of time or an application can forcefully revoke the token after use. Implementing token expiration and revocation is a good practice for security reasons.
+
+7. **OAuth 2.0 and Token Expiration/Revocation**: OAuth 2.0 doesn’t provide specific recommendations for token expiration or revocation. However, it's generally a good practice to implement these features for enhanced security. Note that the implementation may vary as OAuth providers do not standardize these features.
+
+> Remember, these are general guidelines and the specific implementation may vary depending on the specific use case and security requirements of the application. Always consult with a security expert when implementing token handling in your application.
+
